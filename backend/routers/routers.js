@@ -13,20 +13,20 @@ const auth = require("../../db/middleware/auth");
 // get requests
 router.get("/", (req, res) => {
     res.render("index");
-})
+});
 
 router.get("/notes", auth, (req, res) => {
-    res.render("notes")
-})
+    res.render("notes");
+});
 router.get("/login", (req, res) => {
-    res.render("login")
-})
+    res.render("login");
+});
 router.get("/signup", (req, res) => {
-    res.render("signup")
-})
+    res.render("signup");
+});
 router.get("/myprofile", auth, (req, res) => {
-    res.render("myprofile")
-})
+    res.render("myprofile");
+});
 router.get("/logout", auth, async (req, res) => {
     try {
         res.clearCookie("notesapp");
@@ -35,16 +35,16 @@ router.get("/logout", auth, async (req, res) => {
         })
 
         await req.user.save();
-        res.redirect("login")
+        res.status(200).redirect("login");
     } catch (err) {
         console.log(err);
         res.status(401).send(err.message);
     }
-})
+});
 
 router.get("/api/user", auth, async (req, res) => {
     let user = req.user;
-    res.json(user)
+    res.json(user);
 })
 router.get("/notes/edit/:id", auth, async (req, res) => {
     try {
@@ -60,12 +60,12 @@ router.get("/notes/edit/:id", auth, async (req, res) => {
         res.render("edit", {
             title: note.title,
             text: note.note
-        })
+        });
     } catch (err) {
         console.log(err);
         res.status(401).send(err.message);
     }
-})
+});
 
 // post requests
 router.post("/signup", async (req, res) => {
@@ -80,19 +80,19 @@ router.post("/signup", async (req, res) => {
             gender: req.body.gender,
             password,
             confirmPassword
-        })
+        });
 
         if (password === confirmPassword) {
             const user = await userDetails.save();
-            res.status(201).redirect("login")
+            res.status(201).redirect("login");
         } else {
             res.send('password is not matching');
         }
     } catch (err) {
         console.log(err.message);
-        res.status(401).send(err.message)
+        res.status(401).send(err.message);
     }
-})
+});
 
 router.post("/login", async (req, res) => {
     try {
@@ -106,20 +106,20 @@ router.post("/login", async (req, res) => {
         res.cookie("notesapp", token, {
             httpOnly: true,
             secure: true
-        })
+        });
         if (isMatch) {
-            res.status(201).render("notes", {
-                username: user.firstName
-            });
+            // res.status(201).render("notes", {
+            //     username: user.firstName
+            // });
             res.status(200).redirect("notes");
         } else {
             res.send("Invalid credentials");
         }
     } catch (err) {
         console.log(err.message);
-        res.status(401).send("some error occured ", err.message)
+        res.status(401).send("some error occured ", err.message);
     }
-})
+});
 
 router.post("/notes", auth, async (req, res) => {
     let title = req.body.title;
@@ -127,12 +127,12 @@ router.post("/notes", auth, async (req, res) => {
     let body = {
         title,
         note
-    }
+    };
     let user = req.user;
     await user.notes.push(body);
     await user.save();
     res.status(201).render("notes");
-})
+});
 
 // patch request for editing note
 router.patch("/notes/edit/:id", auth, async (req, res) => {
@@ -146,15 +146,15 @@ router.patch("/notes/edit/:id", auth, async (req, res) => {
                 element.title = updatedTitle;
                 element.note = updatedNote;
             }
-        })
+        });
 
         await user.save();
-        res.status(200).send("notes saved successfully")
+        res.status(200).send("notes saved successfully");
     } catch (err) {
         console.log(err);
         res.status(401).send(err.message);
     }
-})
+});
 
 // delete request for deleting note
 router.delete("/notes/delete/:id", auth, async (req, res) => {
@@ -167,10 +167,10 @@ router.delete("/notes/delete/:id", auth, async (req, res) => {
             toRemove = element;
         }
         return element !== toRemove;
-    })
+    });
     await user.save(); 
     res.status(200).send("deleted successfully");
-})
+});
 
 // exporting module router
 module.exports = router;
