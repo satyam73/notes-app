@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --primary-color: #6C63FF;
+    --secondary-color: #F2F2F2;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #ccc9ff;
+}
+
+#notesPageMainHeading {
+    text-align: center;
+    font-size: 4.2rem;
+    color: #6C63FF;
+}
+#userName{
+    font-family: 'Pacifico', cursive;
+    font-size: 4.3rem;
+    text-align: center;
+    color: #6C63FF;
+    text-decoration: underline;
+}
+#notesInputContainer{
+    border: none;
+    background-color: #ccc9ff;
+    box-shadow: 1px 1px 28px 0px #acacac;
+}
+#notesInputContainer input,#notesInputContainer textarea{
+    background-color: #ccc9ff;
+    box-shadow: 1px 1px 37px 6px #3f51b52b inset;
+}
+
+#title {
+    font-size: 3rem;
+    width: 99%;
+}
+
+#note {
+    font-size: 3rem;
+    width: 100%;
+}
+
+#addNoteHeading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #6C63FF;
+}
+
+#addTitleHeading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #6C63FF;
+}
+
+.button {
+    font-size: 2.6rem;
+    background-color: #6C63FF;
+    color: #F2F2F2;
+}
+.button:hover{
+    background-color: #837cfd;
+}
+#allNotesContainer{
+    width: 100vw;
+    height: auto;
+    flex-wrap: wrap;
+
+}
+.subHeading {
+    font-size: 3rem;
+    text-decoration: underline;
+    color: #6C63FF;
+}
+
+.noteCard {
+    width: 33%;
+    background-color: #6C63FF;
+    color: #F2F2F2;
+}
+
+.noteHeading {
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.noteText {
+    font-size: 1.8rem;
+}
+
+.deleteBtn, .editBtn {
+    background-color: #F2F2F2;
+    color: #6C63FF;
+    font-size: 2rem;
+    border: none;
+}
+
+.deleteBtn:hover, .editBtn:hover {
+    background-color: #F2F2F2;
+    color: #6C63FF;
+    font-weight: bold;
+}

@@ -1,0 +1,24 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #homeText{
+       margin-top: 7rem;
+    }
+    #homeSlider{
+        margin-top: 3rem;
+    }
+    .navbar{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+/* Medium devices */
+@media only screen and (max-width: 767px){
+    #profileImgContainer{
+        padding: 3rem;
+      }
+  
+      #profileInfo{
+        padding: 0;
+        padding-left: 0;
+      }
+}

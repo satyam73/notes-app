@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --primary-color: #6C63FF;
+    --secondary-color: #F2F2F2;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #ccc9ff;
+}
+
+#editPageMainHeading {
+    text-align: center;
+    font-size: 4.2rem;
+    color: #6C63FF;
+}
+
+#editNotesInputContainer {
+    border: none;
+    background-color: #ccc9ff;
+    box-shadow: 1px 1px 28px 0px #acacac;
+}
+
+#editNotesInputContainer input, #editNotesInputContainer textarea{
+    background-color: #ccc9ff;
+    box-shadow: 1px 1px 37px 6px #3f51b52b inset;
+}
+
+.title {
+    font-size: 3rem;
+    width: 99%;
+}
+
+.note {
+    font-size: 3rem;
+    width: 100%;
+}
+
+.addNoteHeading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #6C63FF;
+}
+
+.addTitleHeading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #6C63FF;
+}
+
+.button {
+    font-size: 2.6rem;
+    background-color: #6C63FF;
+    color: #F2F2F2;
+}
+
+.button:hover {
+    background-color: #837cfd;
+}

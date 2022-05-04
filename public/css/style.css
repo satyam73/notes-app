@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --primary-color: #6C63FF;
+    --secondary-color: #F2F2F2;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* navbar styling */
+
+#logo{
+    padding: auto;
+    margin-left: 1.3rem;
+    color: #6C63FF;
+}
+.nav-link{
+    color: #6C63FF !important;
+    font-weight: 600;
+}
+
+/* home page styling */
+
+#main{
+    height: 80vh;
+}
+
+#homeText{
+    height: 50%;
+}
+
+#homeText h1{
+    font-size: 5rem;
+    font-weight: 600;
+    color: #6C63FF;
+}
+#homeText p{
+    font-size: 2rem;
+}
+
+#homeSlider{
+    height: 70%;
+}
+
+.sliderImg{
+    height: 45rem;
+}

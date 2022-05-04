@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --primary-color: #6C63FF;
+    --secondary-color: #F2F2F2;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#loginForm {
+    width: 100%;
+}
+#loginForm div{
+    width: 70%;
+}
+#loginForm div:last-child{
+    width: fit-content;
+}
+#loginForm label{
+    font-size: 1.6rem;
+}
+#loginForm input {
+    font-size: 1.8rem;
+    padding: 1.4rem;
+    margin: 0.4rem;
+    width: 100%;
+}
+
+#loginContainer {
+    height: 45rem;
+    margin-top: 5rem;
+    box-shadow: 1px 1px 28px 0px #888888;
+}
+
+#loginContainer::before{
+    content: "";
+    background: url('https://images.unsplash.com/photo-1483354483454-4cd359948304?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80') 
+    no-repeat center center/cover;
+    position: absolute;
+    opacity: 0.3;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#loginBtn{
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1.8rem;
+    width: 100%;
+}

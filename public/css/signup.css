@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --primary-color: #6C63FF;
+    --secondary-color: #F2F2F2;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#signupForm {
+    width: 100%;
+}
+
+#signupForm div{
+    width: 70%;
+}
+
+#signupForm div:last-child{
+    width: fit-content;
+}
+
+#signupForm label{
+    font-size: 1.6rem;
+}
+
+#signupForm input {
+    padding: 1.2rem;
+    margin: 0.4rem;
+    /* width: 100%; */
+    font-size: 1.7rem;
+}
+
+#registerContainer {
+    height: 72rem;
+    margin-top: 1rem;
+    box-shadow: 1px 1px 28px 0px #888888;
+
+}
+
+#registerContainer::before{
+    content: "";
+    background: url('https://images.unsplash.com/photo-1483354483454-4cd359948304?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80') 
+    no-repeat center center/cover;
+    position: absolute;
+    opacity: 0.3;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#registerBtn{
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1.8rem;
+    width: 100%;
+}
