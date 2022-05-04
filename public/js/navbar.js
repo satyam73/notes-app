@@ -2,7 +2,7 @@
 
 // getting user data from server
 async function userData() {
-    let response = await fetch("http://localhost:5001/api/user");
+    let response = await fetch("/api/user");
     return response;
 
 }

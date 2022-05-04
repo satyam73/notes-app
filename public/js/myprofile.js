@@ -8,7 +8,7 @@ let profileImg = document.getElementById("profileImg");
 
 // get user info from server
 async function getUserInfo() {
-    let response = await fetch("http://localhost:5001/api/user")
+    let response = await fetch("/api/user")
     let data = await response.json();
     firstName.innerHTML = `<strong>First Name : </strong>${data.firstName}`;
     lastName.innerHTML = `<strong>Last Name : </strong>${data.lastName}`;
@@ -18,7 +18,7 @@ async function getUserInfo() {
 
 // get avatar according to gender
 async function getAvatar(){
-    let response = await fetch("http://localhost:5001/api/user")
+    let response = await fetch("/api/user")
     let data = await response.json();
     if(data.gender == "female"){
         profileImg.setAttribute("src" , "/images/female_avatar.svg")

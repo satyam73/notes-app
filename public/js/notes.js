@@ -5,7 +5,7 @@ let deleteBtn = document.getElementsByClassName("deleteBtn");
 
 // getting user from the server
 async function getUser() {
-    let response = await fetch("http://localhost:5001/api/user")
+    let response = await fetch("/api/user")
     let data = await response.json();
     return data;
 }
@@ -69,7 +69,7 @@ async function deleteNoteHandler(elem) {
         if (confirmation) {
             let notesPopup = document.getElementById("notesPopup");
             let _id = elem.parentElement.parentElement.getAttribute("id");
-            let response = await fetch(`http://localhost:5001/notes/delete/${_id}`, {
+            let response = await fetch(`/notes/delete/${_id}`, {
                 method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json'
