@@ -105,7 +105,7 @@ router.post("/login", async (req, res) => {
 
         res.cookie("notesapp", token, {
             httpOnly: true,
-            secure: true
+            // secure: true
         });
         if (isMatch) {
             // res.status(201).render("notes", {
