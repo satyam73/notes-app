@@ -27,4 +27,10 @@
       .noteCard{
           width: 90%;
       }
+      #loginContainer{
+          width: 100%;
+      }
+      #registerContainer{
+        width: 100%;
+      }
 }
