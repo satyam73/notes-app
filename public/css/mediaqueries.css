@@ -1,36 +1,43 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .navbar{
+    .navbar {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 }
+
 /* Medium devices */
-@media only screen and (max-width: 767px){
-    #main{
+@media only screen and (max-width: 767px) {
+    #main {
         height: fit-content;
-    } 
-    #homeText{
+    }
+
+    #homeText {
         margin-top: 7rem;
-     }
-     #homeSlider{
-         margin-top: 3rem;
-     }
-    #profileImgContainer{
+    }
+
+    #homeSlider {
+        margin-top: 3rem;
+    }
+
+    #profileImgContainer {
         padding: 3rem;
-      }
-  
-      #profileInfo{
+    }
+
+    #profileInfo {
         padding: 0;
         padding-left: 0;
-      }
-      .noteCard{
-          width: 90%;
-      }
-      #loginContainer{
-          width: 100%;
-      }
-      #registerContainer{
+    }
+
+    .noteCard {
+        width: 100% !important;
+    }
+
+    #loginContainer {
         width: 100%;
-      }
+    }
+
+    #registerContainer {
+        width: 100%;
+    }
 }
