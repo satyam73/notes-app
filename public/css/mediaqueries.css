@@ -8,6 +8,11 @@
 
 /* Medium devices */
 @media only screen and (max-width: 767px) {
+    nav {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
     #main {
         height: fit-content;
     }
